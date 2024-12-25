@@ -1,0 +1,438 @@
+/* education.css */
+
+/* Hero Section */
+.education-hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.education-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(37, 99, 235, 0.03) 10px,
+            rgba(37, 99, 235, 0.03) 20px
+    );
+}
+
+.education-hero .hero-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.education-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+/* Timeline Section */
+.timeline-section {
+    padding: 6rem 0;
+    background: var(--background);
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.timeline-content {
+    position: relative;
+    width: calc(50% - 40px);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+    padding-left: 40px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    padding-right: 40px;
+}
+
+.timeline-date {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.timeline-school {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.timeline-school:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-school h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.timeline-school h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.school-details {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.grade-pill,
+.location-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+}
+
+.school-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stat h4 {
+    font-size: 0.9rem;
+    color: var(--light-text);
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Academic Highlights */
+.academic-highlights {
+    padding: 6rem 0;
+    background: var(--section-bg);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.highlight-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+}
+
+.highlight-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.highlight-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.highlight-card p {
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+/* Quote Section */
+.education-quote {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.quote-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quote-content i {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    opacity: 0.5;
+}
+
+.quote-content blockquote {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-dot {
+        left: 30px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 80px);
+        margin-left: 80px !important;
+        padding: 0 !important;
+    }
+
+    .school-stats {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .education-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-content blockquote {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .education-hero h1 {
+        font-size: 2rem;
+    }
+
+    .timeline-school {
+        padding: 1.5rem;
+    }
+
+    .school-details {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .grade-pill,
+    .location-pill {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .quote-content blockquote {
+        font-size: 1.2rem;
+    }
+}
+
+/* Animation Classes */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effects */
+.timeline-school:hover .school-stats {
+    border-top-color: var(--primary-color);
+}
+
+.highlight-card:hover i {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.grade-pill:hover,
+.location-pill:hover {
+    background: var(--primary-color);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--primary-color);
+    z-index: 1001;
+    transition: width 0.1s ease;
+}
+
+/* Custom Scrollbar for Timeline */
+.timeline::-webkit-scrollbar {
+    width: 8px;
+}
+
+.timeline::-webkit-scrollbar-track {
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 4px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Timeline Animations */
+.timeline-dot::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+}
+
+/* Interactive Elements */
+.timeline-school.active {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-card.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.highlight-card.active i,
+.highlight-card.active h3,
+.highlight-card.active p {
+    color: white;
+}
+
+/* Loading Animation */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.loading::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
